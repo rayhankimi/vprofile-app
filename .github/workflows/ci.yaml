@@ -70,7 +70,7 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           status: ${{ job.status }}
-          content: "@<294010785330495489> Build pipeline has finished"
+          content: "<@294010785330495489> Build pipeline has finished"
       
   docker-build-push:
     if: github.event_name == 'push'
@@ -117,7 +117,7 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           status: ${{ job.status }}
-          content: "@<294010785330495489> Docker pipeline has finished"
+          content: "<@294010785330495489> Docker pipeline has finished"
 
   update-helm:
     if: github.event_name == 'push'
@@ -169,5 +169,5 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           status: ${{ job.status }}
-          content: "@<294010785330495489> Helm pipeline has finished"
+          content: "<@294010785330495489> Helm pipeline has finished"
 
