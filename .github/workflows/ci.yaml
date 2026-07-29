@@ -123,6 +123,8 @@ jobs:
     if: github.event_name == 'push'
     name: Update Helm values in separate repo
     runs-on: ubuntu-latest
+    environment:
+      name: production            # Wait for manual approval
     needs: docker-build-push
     steps:
       - name: Checkout workflow repo
